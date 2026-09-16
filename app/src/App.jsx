@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import Accueil from './screens/Accueil';
 import Generation from './screens/Generation';
@@ -12,7 +12,7 @@ import Historique from './screens/Historique';
 export default function App() {
   return (
     <AppProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Accueil />} />
           <Route path="/generation" element={<Generation />} />
@@ -23,7 +23,7 @@ export default function App() {
           <Route path="/activite/materiel" element={<Materiel />} />
           <Route path="/historique" element={<Historique />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </AppProvider>
   );
 }
