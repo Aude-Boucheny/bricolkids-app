@@ -1,0 +1,58 @@
+:root {
+  /* 4a — Lavande */
+  --ink: #3B3550;
+  --ink-soft: #625B7A;
+  --ink-mute: #6E6885;
+  --label: #5B4A9E;
+  --lavender: #8B7BD8;
+  --lavender-tint: #F0EDFA;
+  --page: #F6F3FF;
+  --canvas: #EDEAE3;
+  --white: #FFFFFF;
+
+  --peach: #FFB9A3;
+  --peach-ink: #6B3423;
+  --green: #7FCBB4;
+  --green-ink: #1F4438;
+  --yellow: #FFE08A;
+  --yellow-ink: #5C4715;
+
+  --cta: #B8863A;
+  --cta-shadow: #785623;
+  --cta-ink: #FFFFFF;
+
+  --font-display: 'Baloo 2', cursive;
+  --font-body: 'Mulish', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--canvas);
+  font-family: var(--font-body);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}

@@ -1,0 +1,13 @@
+/* Ombres — une ombre douce pour les cartes, une ombre "sticker" pour les boutons */
+:root {
+  --as-shadow-card: 0 10px 30px rgba(63, 44, 10, 0.08);
+  --as-shadow-card-hover: 0 16px 40px rgba(63, 44, 10, 0.14);
+  --as-shadow-btn: 0 6px 0 var(--as-ochre-dark);
+  --as-shadow-btn-press: 0 2px 0 var(--as-ochre-dark);
+
+  /* Contour typographique du titre bulle */
+  --as-title-outline: 3px 3px 0 var(--as-indigo-dark), -1px -1px 0 var(--as-indigo-dark), 1px -1px 0 var(--as-indigo-dark), -1px 1px 0 var(--as-indigo-dark);
+
+  --shadow-card: var(--as-shadow-card);
+  --shadow-control: var(--as-shadow-btn);
+}

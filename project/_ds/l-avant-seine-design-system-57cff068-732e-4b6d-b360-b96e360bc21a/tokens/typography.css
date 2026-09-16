@@ -1,0 +1,35 @@
+/* Typographie */
+:root {
+  --as-font-display: 'Baloo 2', system-ui, sans-serif;
+  --as-font-body: 'Mulish', system-ui, sans-serif;
+
+  /* Graisses utilisées dans la source */
+  --as-weight-display: 800;   /* titres d'accroche */
+  --as-weight-title: 700;     /* titres de section / spectacle */
+  --as-weight-strong: 800;    /* boutons, bandeaux, chiffres */
+  --as-weight-tag: 700;       /* tags */
+  --as-weight-body: 600;      /* description courante */
+
+  /* Échelle */
+  --as-text-display-xl: 72px;
+  --as-text-display: 56px;
+  --as-text-title: 34px;
+  --as-text-card-title: 22px;
+  --as-text-lead: 18px;
+  --as-text-body: 16px;
+  --as-text-info: 13px;
+  --as-text-tag: 12px;
+
+  /* Interlignes */
+  --as-leading-display: 0.92;
+  --as-leading-title: 1.1;
+  --as-leading-body: 1.6;
+
+  /* Interlettrage */
+  --as-tracking-tag: 0.02em;
+  --as-tracking-display: -0.01em;
+
+  /* Alias sémantiques */
+  --font-heading: var(--as-font-display);
+  --font-text: var(--as-font-body);
+}

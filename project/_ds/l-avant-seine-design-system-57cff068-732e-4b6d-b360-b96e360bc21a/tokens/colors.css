@@ -1,0 +1,47 @@
+/* Couleurs — valeurs exactes de la landing page "Saison 23·24" */
+:root {
+  /* Marque */
+  --as-indigo: #3F3FA0;
+  --as-indigo-dark: #2C2C74;
+  --as-ochre: #B8863A;
+  --as-ochre-dark: #8F6726;
+  --as-cream: #FAF3E6;
+  --as-cream-alt: #EFE6D2;
+  --as-white: #FFFFFF;
+  --as-ivory-text: #FFF8EC;
+
+  /* Texte */
+  --as-text-brown: #5B4A2E;
+  --as-text-brown-dark: #4A3B22;
+  --as-text-muted-gold: #8A7A57;
+  --as-text-lilac: #DCD6F0;
+  --as-text-lilac-dim: #B9B2E0;
+
+  /* Voiles / transparences */
+  --as-veil-white-60: rgba(255, 255, 255, 0.6);
+  --as-veil-white-15: rgba(255, 255, 255, 0.15);
+  --as-veil-indigo-08: rgba(63, 63, 160, 0.08);
+
+  /* Alias sémantiques */
+  --surface-page: var(--as-cream);
+  --surface-card: var(--as-white);
+  --surface-chip: var(--as-cream-alt);
+  --surface-inverse: var(--as-indigo);
+  --surface-inverse-deep: var(--as-indigo-dark);
+
+  --text-body: var(--as-text-brown);
+  --text-body-strong: var(--as-text-brown-dark);
+  --text-muted: var(--as-text-muted-gold);
+  --text-heading: var(--as-indigo);
+  --text-on-inverse: var(--as-white);
+  --text-on-inverse-muted: var(--as-text-lilac);
+  --text-on-inverse-dim: var(--as-text-lilac-dim);
+  --text-on-accent: var(--as-ivory-text);
+
+  --accent: var(--as-ochre);
+  --accent-press: var(--as-ochre-dark);
+  --border-on-inverse: var(--as-veil-white-60);
+
+  --link: var(--as-indigo);
+  --link-hover: var(--as-indigo-dark);
+}

@@ -1,0 +1,5 @@
+/* Webfonts — Baloo 2 (display) + Mulish (texte).
+   Aucun binaire de police n'était fourni dans les sources : les deux familles
+   sont servies depuis Google Fonts. Remplacer par des @font-face locales
+   (assets/fonts/*.woff2) si le théâtre fournit ses fichiers. */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Mulish:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600&display=swap");

@@ -1,0 +1,26 @@
+/* Espacements — pas de 4px, rythme large propre à la landing page */
+:root {
+  --as-space-1: 4px;
+  --as-space-2: 8px;
+  --as-space-3: 12px;
+  --as-space-4: 16px;
+  --as-space-5: 22px;
+  --as-space-6: 26px;
+  --as-space-7: 32px;
+  --as-space-8: 48px;
+  --as-space-9: 64px;
+  --as-space-10: 96px;
+
+  /* Gabarits */
+  --as-container: 1160px;
+  --as-gutter: 24px;
+  --as-section-gap: var(--as-space-10);
+  --as-grid-gap: var(--as-space-7);
+
+  /* Rembourrages de composants (valeurs exactes de la source) */
+  --as-pad-btn: 14px 26px;
+  --as-pad-tag: 5px 12px;
+  --as-pad-info: 10px 14px;
+  --as-pad-card: 22px;
+  --as-pad-hero: 64px 48px;
+}

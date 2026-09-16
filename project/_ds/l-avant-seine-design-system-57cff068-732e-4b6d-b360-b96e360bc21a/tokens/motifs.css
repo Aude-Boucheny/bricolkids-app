@@ -1,0 +1,41 @@
+/* Motifs graphiques de la marque : texture mouchetée, soleil à pointes, ligne ondulée.
+   Tous réalisés en CSS pur (aucun asset image n'était fourni). */
+:root {
+  --as-dots-size: 16px;
+  --as-wave-height: 14px;
+}
+
+/* Texture mouchetée — fond pointillé indigo */
+.as-texture-dots {
+  background-image: radial-gradient(var(--as-indigo) 1px, transparent 1.4px);
+  background-size: var(--as-dots-size) var(--as-dots-size);
+}
+.as-texture-dots--cream {
+  background-image: radial-gradient(var(--as-cream-alt) 1px, transparent 1.4px);
+  background-size: var(--as-dots-size) var(--as-dots-size);
+}
+.as-texture-dots--light {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1.4px);
+  background-size: var(--as-dots-size) var(--as-dots-size);
+}
+
+/* Soleil à pointes — rayons rayonnants en conic-gradient */
+.as-motif-sun {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: repeating-conic-gradient(var(--as-ochre) 0deg 7.5deg, transparent 7.5deg 15deg);
+}
+
+/* Ligne ondulée — vague répétée en masque CSS */
+.as-motif-wave {
+  height: var(--as-wave-height);
+  background: var(--as-ochre);
+  -webkit-mask-image: radial-gradient(circle at 50% 100%, transparent 68%, #000 69%), radial-gradient(circle at 50% 0%, #000 68%, transparent 69%);
+  mask-image: radial-gradient(circle at 50% 100%, transparent 68%, #000 69%), radial-gradient(circle at 50% 0%, #000 68%, transparent 69%);
+  -webkit-mask-size: 28px 100%;
+  mask-size: 28px 100%;
+  -webkit-mask-position: 0 0, 14px 0;
+  mask-position: 0 0, 14px 0;
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+}

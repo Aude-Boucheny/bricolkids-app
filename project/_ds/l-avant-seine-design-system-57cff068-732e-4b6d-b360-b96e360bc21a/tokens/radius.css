@@ -1,0 +1,11 @@
+/* Rayons */
+:root {
+  --as-radius-pill: 999px; /* boutons, tags */
+  --as-radius-lg: 32px;    /* sections hero / footer */
+  --as-radius-md: 22px;    /* cartes spectacle */
+  --as-radius-sm: 12px;    /* bandeau date / tarif */
+
+  --radius-control: var(--as-radius-pill);
+  --radius-card: var(--as-radius-md);
+  --radius-panel: var(--as-radius-lg);
+}
