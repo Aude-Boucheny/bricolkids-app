@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import { useState } from 'react';
 import { Screen, StatusBar, PrimaryButton, SecondaryButton, SectionLabel, Card } from '../components/ui';
+import { FinishedPreview } from '../components/FinishedPreview';
 
 const TABS = ['Aperçu', 'Matériel', 'Étapes', 'Patrons'];
 
@@ -91,6 +92,15 @@ export default function Fiche() {
       </div>
 
       <div style={{ padding: '16px 24px 24px', display: 'flex', flexDirection: 'column', gap: 14, overflowY: 'auto' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+          <div style={{ height: 150, borderRadius: 20, overflow: 'hidden', boxShadow: '0 8px 22px rgba(59,53,80,.08)' }}>
+            <FinishedPreview type={activity.patterns[0]?.type} />
+          </div>
+          <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-mute)', textAlign: 'center' }}>
+            Aperçu du résultat une fois monté
+          </div>
+        </div>
+
         <Card style={{ fontSize: 14, fontWeight: 600, lineHeight: 1.55 }}>{activity.blurb}</Card>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>

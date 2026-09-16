@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import { Screen, StatusBar, TopBar, PrimaryButton, SecondaryButton } from '../components/ui';
-import { PatternPage } from '../components/Pattern';
+import { FinishedPreview } from '../components/FinishedPreview';
 
 export default function Propositions() {
   const navigate = useNavigate();
@@ -44,12 +44,10 @@ export default function Propositions() {
           onClick={() => openActivity(main)}
           style={{ textAlign: 'left', border: 'none', padding: 0, background: '#FFFFFF', borderRadius: 22, boxShadow: '0 10px 26px rgba(59,53,80,.10)', overflow: 'hidden', cursor: 'pointer' }}
         >
-          <div style={{ height: 112, background: main.patterns[0]?.color ?? 'var(--lavender)', backgroundImage: 'radial-gradient(rgba(255,255,255,.32) 1px, transparent 1.4px)', backgroundSize: '16px 16px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 12 }}>
+          <div style={{ height: 140, position: 'relative' }}>
+            <FinishedPreview type={main.patterns[0]?.type} />
             <div style={{ position: 'absolute', top: 11, right: 11, background: 'var(--yellow)', color: 'var(--yellow-ink)', fontWeight: 800, fontSize: 11, padding: '6px 12px', borderRadius: 999 }}>
               Recommandé
-            </div>
-            <div style={{ width: 72, height: 72 }}>
-              <PatternPage type={main.patterns[0]?.type} color="#FFFFFF" index={0} total={1} showGuides={false} />
             </div>
           </div>
           <div style={{ padding: 15, display: 'flex', flexDirection: 'column', gap: 9 }}>
@@ -69,8 +67,8 @@ export default function Propositions() {
             onClick={() => openActivity(activity)}
             style={{ textAlign: 'left', border: 'none', padding: 0, background: '#FFFFFF', borderRadius: 22, boxShadow: '0 10px 26px rgba(59,53,80,.10)', display: 'flex', overflow: 'hidden', cursor: 'pointer' }}
           >
-            <div style={{ width: 92, background: activity.patterns[0]?.color ?? 'var(--peach)', backgroundImage: 'radial-gradient(rgba(255,255,255,.35) 1px, transparent 1.4px)', backgroundSize: '16px 16px', flex: '0 0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 10 }}>
-              <PatternPage type={activity.patterns[0]?.type} color="#FFFFFF" index={0} total={1} showGuides={false} />
+            <div style={{ width: 96, flex: '0 0 auto' }}>
+              <FinishedPreview type={activity.patterns[0]?.type} />
             </div>
             <div style={{ padding: 13, display: 'flex', flexDirection: 'column', gap: 6, justifyContent: 'center' }}>
               <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 17, color: 'var(--ink)' }}>{activity.title}</div>

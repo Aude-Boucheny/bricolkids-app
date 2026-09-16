@@ -17,6 +17,7 @@ export default function Accueil() {
   const navigate = useNavigate();
   const { brief, setBrief } = useApp();
   const [local, setLocal] = useState(brief);
+  const [precisionOpen, setPrecisionOpen] = useState(Boolean(brief.precision));
 
   const countActive = local.ages.length <= 3 ? local.ages.length : '4+';
 
@@ -242,23 +243,62 @@ export default function Accueil() {
         </div>
       </div>
 
-      <div style={{ marginTop: 'auto', padding: '14px 24px 28px', display: 'flex', flexDirection: 'column', gap: 10 }}>
-        <input
-          value={local.precision}
-          onChange={(e) => setLocal((b) => ({ ...b, precision: e.target.value }))}
-          placeholder="Autre chose à préciser ?"
-          style={{
-            background: '#FFFFFF',
-            border: 'none',
-            borderRadius: 14,
-            padding: '12px 16px',
-            fontSize: 13.5,
-            fontWeight: 600,
-            color: 'var(--ink-mute)',
-            boxShadow: '0 6px 18px rgba(59,53,80,.07)',
-          }}
-        />
-        <PrimaryButton onClick={submit}>Fabriquer l'activité</PrimaryButton>
+      <div style={{ marginTop: 'auto', padding: '10px 24px 28px', display: 'flex', flexDirection: 'column', gap: 20 }}>
+        {precisionOpen ? (
+          <input
+            autoFocus
+            value={local.precision}
+            onChange={(e) => setLocal((b) => ({ ...b, precision: e.target.value }))}
+            placeholder="Autre chose à préciser ?"
+            style={{
+              background: '#FFFFFF',
+              border: 'none',
+              borderRadius: 14,
+              padding: '12px 16px',
+              fontSize: 13.5,
+              fontWeight: 600,
+              color: 'var(--ink-mute)',
+              boxShadow: '0 6px 18px rgba(59,53,80,.07)',
+            }}
+          />
+        ) : (
+          <button
+            onClick={() => setPrecisionOpen(true)}
+            style={{
+              alignSelf: 'flex-start',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 6,
+              background: 'none',
+              border: 'none',
+              padding: '4px 2px',
+              fontSize: 12.5,
+              fontWeight: 700,
+              color: 'var(--ink-mute)',
+              cursor: 'pointer',
+            }}
+          >
+            <span
+              style={{
+                width: 20,
+                height: 20,
+                borderRadius: 999,
+                border: '1.5px solid var(--ink-mute)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: 13,
+                lineHeight: 1,
+              }}
+            >
+              +
+            </span>
+            Autre chose à préciser ?
+          </button>
+        )}
+        <PrimaryButton onClick={submit} style={{ height: 60, fontSize: 18 }}>
+          Fabriquer l'activité
+        </PrimaryButton>
       </div>
     </Screen>
   );
