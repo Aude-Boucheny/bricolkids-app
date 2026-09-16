@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import { Screen, StatusBar, PrimaryButton } from '../components/ui';
-import { PatternPage } from '../components/Pattern';
+import { StepVisual } from '../components/StepVisual';
+import { FinishedPreview } from '../components/FinishedPreview';
 
 export default function Etapes() {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ export default function Etapes() {
     <Screen>
       <StatusBar />
       <div style={{ padding: '12px 24px 0', display: 'flex', alignItems: 'center', gap: 12 }}>
-        <button onClick={prev} style={{ background: 'none', border: 'none', fontSize: 20, cursor: 'pointer', color: 'inherit' }}>←</button>
+        <button onClick={prev} style={{ background: 'none', border: 'none', fontSize: 28, cursor: 'pointer', color: 'inherit', padding: 4 }}>←</button>
         <div style={{ flex: 1, fontSize: 13, fontWeight: 700 }}>Étape {index + 1} sur {steps.length}</div>
         <div style={{ fontSize: 11, fontWeight: 800, color: 'var(--label)' }}>Mode mains libres</div>
       </div>
@@ -48,20 +49,12 @@ export default function Etapes() {
         ))}
       </div>
 
-      <div
-        style={{
-          margin: '16px 24px 0',
-          height: 180,
-          background: 'var(--lavender-tint)',
-          borderRadius: 20,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <div style={{ width: 110, height: 130 }}>
-          <PatternPage type={activity.patterns[0]?.type} color={activity.patterns[0]?.color ?? 'var(--lavender)'} index={0} total={1} showGuides={false} />
-        </div>
+      <div style={{ margin: '16px 24px 0', height: 180, borderRadius: 20, overflow: 'hidden' }}>
+        {isLast ? (
+          <FinishedPreview type={activity.patterns[0]?.type} />
+        ) : (
+          <StepVisual kind={step.visual} color={activity.patterns[0]?.color ?? 'var(--lavender)'} />
+        )}
       </div>
 
       <div style={{ padding: '18px 24px 0', display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -94,7 +87,7 @@ export default function Etapes() {
         >
           ‹
         </button>
-        <PrimaryButton onClick={next}>{isLast ? "C'est terminé !" : 'Étape suivante'}</PrimaryButton>
+        <PrimaryButton onClick={next} style={{ flex: 1 }}>{isLast ? "C'est terminé !" : 'Étape suivante'}</PrimaryButton>
       </div>
     </Screen>
   );

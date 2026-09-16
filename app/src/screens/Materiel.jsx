@@ -43,7 +43,7 @@ export default function Materiel() {
     <Screen>
       <StatusBar />
       <div style={{ padding: '12px 24px 0', display: 'flex', alignItems: 'center', gap: 12 }}>
-        <button onClick={() => navigate('/activite')} style={{ background: 'none', border: 'none', fontSize: 20, cursor: 'pointer', color: 'inherit' }}>←</button>
+        <button onClick={() => navigate('/activite')} style={{ background: 'none', border: 'none', fontSize: 28, cursor: 'pointer', color: 'inherit', padding: 4 }}>←</button>
         <div style={{ flex: 1, fontSize: 15, fontWeight: 700 }}>Matériel</div>
         <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--ink-mute)' }}>
           {Object.values(checked).filter(Boolean).length}/{items.length}
@@ -75,7 +75,7 @@ export default function Materiel() {
 
       <div style={{ marginTop: 'auto', padding: '14px 24px 28px', display: 'flex', gap: 10 }}>
         <SecondaryButton style={{ flex: 1 }} onClick={share}>Partager la liste</SecondaryButton>
-        <PrimaryButton onClick={() => navigate('/activite')}>C'est prêt</PrimaryButton>
+        <PrimaryButton onClick={() => navigate('/activite')} style={{ flex: 1 }}>C'est prêt</PrimaryButton>
       </div>
     </Screen>
   );

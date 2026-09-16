@@ -52,7 +52,7 @@ export default function Fiche() {
           <span>▮▮▮</span>
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 19, color: '#FFFFFF' }}>
-          <button onClick={() => navigate('/propositions')} style={{ background: 'none', border: 'none', color: 'inherit', fontSize: 20, cursor: 'pointer', padding: 0 }}>←</button>
+          <button onClick={() => navigate('/propositions')} style={{ background: 'none', border: 'none', color: 'inherit', fontSize: 28, cursor: 'pointer', padding: 0 }}>←</button>
           <button onClick={onToggleFavorite} style={{ background: 'none', border: 'none', color: 'inherit', fontSize: 20, cursor: 'pointer', padding: 0 }}>
             {favorite ? '♥' : '♡'}
           </button>
@@ -132,7 +132,7 @@ export default function Fiche() {
 
       <div style={{ marginTop: 'auto', padding: '14px 24px 28px', display: 'flex', gap: 10 }}>
         <SecondaryButton onClick={() => navigate('/activite/patrons')}>Imprimer</SecondaryButton>
-        <PrimaryButton onClick={() => navigate('/activite/etapes')}>Commencer</PrimaryButton>
+        <PrimaryButton onClick={() => navigate('/activite/etapes')} style={{ flex: 1 }}>Commencer</PrimaryButton>
       </div>
     </Screen>
   );

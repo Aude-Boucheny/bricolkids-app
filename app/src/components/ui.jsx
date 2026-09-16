@@ -29,7 +29,7 @@ export function TopBar({ onBack, title, right }) {
           style={{
             background: 'none',
             border: 'none',
-            fontSize: 22,
+            fontSize: 28,
             color: 'inherit',
             cursor: 'pointer',
             padding: 4,
@@ -54,7 +54,6 @@ export function PrimaryButton({ children, onClick, disabled, style, type = 'butt
       onClick={onClick}
       disabled={disabled}
       style={{
-        flex: 1,
         height: 54,
         border: 'none',
         borderRadius: 999,

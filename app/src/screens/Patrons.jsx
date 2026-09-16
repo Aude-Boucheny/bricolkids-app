@@ -45,7 +45,7 @@ export default function Patrons() {
     <Screen>
       <StatusBar />
       <div style={{ padding: '12px 24px 0', display: 'flex', alignItems: 'center', gap: 12 }}>
-        <button onClick={() => navigate('/activite')} style={{ background: 'none', border: 'none', fontSize: 20, cursor: 'pointer', color: 'inherit' }}>←</button>
+        <button onClick={() => navigate('/activite')} style={{ background: 'none', border: 'none', fontSize: 28, cursor: 'pointer', color: 'inherit', padding: 4 }}>←</button>
         <div style={{ flex: 1, fontSize: 15, fontWeight: 700 }}>Patrons à imprimer</div>
       </div>
 

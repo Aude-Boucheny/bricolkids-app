@@ -80,7 +80,7 @@ export default function Propositions() {
 
       <div style={{ marginTop: 'auto', padding: '14px 24px 28px', display: 'flex', gap: 10 }}>
         <SecondaryButton onClick={regenerate}>Autres</SecondaryButton>
-        <PrimaryButton onClick={() => openActivity(main)}>Voir le kit</PrimaryButton>
+        <PrimaryButton onClick={() => openActivity(main)} style={{ flex: 1 }}>Voir le kit</PrimaryButton>
       </div>
     </Screen>
   );

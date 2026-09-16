@@ -31,7 +31,7 @@ export default function Historique() {
     <Screen>
       <StatusBar />
       <div style={{ padding: '16px 24px 0', display: 'flex', alignItems: 'center', gap: 12 }}>
-        <button onClick={() => navigate('/')} style={{ background: 'none', border: 'none', fontSize: 20, cursor: 'pointer', color: 'inherit' }}>←</button>
+        <button onClick={() => navigate('/')} style={{ background: 'none', border: 'none', fontSize: 28, cursor: 'pointer', color: 'inherit', padding: 4 }}>←</button>
         <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 24 }}>Historique</div>
       </div>
 
